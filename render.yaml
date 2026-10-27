@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: green-tasty-preorder-api
+    runtime: docker
+    plan: free
+    region: frankfurt
+    branch: main
+    healthCheckPath: /health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
